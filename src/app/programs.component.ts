@@ -8,7 +8,6 @@ import { ProgramService } from './program.service';
   selector: 'program',
   template: `
   <div>
-   <button (click)="loadProgram()">Load program</button>
    {{ programs | json }}
  </div>
   `
@@ -26,6 +25,10 @@ export class ProgramComponent {
   loadProgram() {
    this.programService.getProgram().subscribe(data => this.programs = data);
    //console.log( this.userService.getUser())
+ }
+
+ ngOnInit() {
+  this.loadProgram();
  }
 
 }

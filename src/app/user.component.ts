@@ -8,7 +8,6 @@ import { UserService } from './user.service';
   selector: 'user',
   template: `
   <div>
-   <button (click)="loadUser()">Load profile</button>
    {{ profile | json }}
  </div>
   `
@@ -26,6 +25,9 @@ export class UserComponent {
   loadUser() {
    this.userService.getUser().subscribe(data => this.profile = data);
    //console.log( this.userService.getUser())
+ }
+ ngOnInit() {
+  this.loadUser();
  }
 
 }
