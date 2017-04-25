@@ -17,12 +17,16 @@ import { ProgramService }           from './program.service';
 
 import { AppRoutingModule }         from './app-routing.module';
 
+import { PaginatorModule } from 'primeng/primeng';
+
 @NgModule({
   imports:      [
     BrowserModule,
     HttpModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PaginatorModule
+
    ],
   declarations: [
     AppComponent,
