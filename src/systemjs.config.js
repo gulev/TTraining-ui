@@ -13,6 +13,7 @@
       // our app is within the app folder
       app: 'app',
       'ng-http-interceptor': 'npm:ng-http-interceptor/dist/bundles/ng-http-interceptor.umd.js',
+      'ng2-file-upload': 'npm:ng2-file-upload/bundles/ng2-file-upload.umd.js',
       // angular bundles
       '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
       '@angular/common': 'npm:@angular/common/bundles/common.umd.js',

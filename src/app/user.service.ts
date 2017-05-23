@@ -13,7 +13,7 @@ export class UserService {
   ) { }
 
   getUser(): Observable<User[]> {
-      return this.http.get(`http://localhost:2000/api/v1/User`)
+      return this.http.get(`https://ttraining-api-gulev.c9users.io/api/v1/User`)
       .map((res:Response) => res.json());
     }
 
