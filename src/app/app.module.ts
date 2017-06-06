@@ -20,6 +20,8 @@ import { AppRoutingModule }                                   from './app-routin
 
 import { FileDropDirective, FileSelectDirective }             from 'ng2-file-upload';
 
+import { NgbModule }                                          from '@ng-bootstrap/ng-bootstrap';
+
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { FileDropDirective, FileSelectDirective }             from 'ng2-file-upl
     HttpModule,
     FormsModule,
     AppRoutingModule,
-    HttpInterceptorModule
+    HttpInterceptorModule,
+    NgbModule.forRoot()
    ],
   declarations: [
     AppComponent,

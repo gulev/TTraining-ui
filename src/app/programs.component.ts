@@ -9,6 +9,11 @@ import { FileUploader }           from 'ng2-file-upload';
 @Component({
   selector: 'program',
   template: `
+        <a style="float:left !important; margin-left:10px !important;" href="#"class="btn btn-success">
+         <i class="icon-bolt"></i>
+         Add New Program
+       </a>
+       <div style="clear:both; margin-top:10px;"></div>
 				<div style="margin-left:10px !important;" *ngFor="let program of programs"
           [ngClass]="{'blue': (program.difficulty==='Begginer'), 'yellow': (program.difficulty==='Advanced'), 'red': (program.difficulty==='Pro')}"
           class="widget span4 noMargin"
@@ -51,6 +56,8 @@ import { FileUploader }           from 'ng2-file-upload';
             <input type="file" ng2FileSelect [uploader]="uploader" />
           </div>
         </div>
+
+
   `,
   styles:['.table th, .table td {border: none !important;}']
 })

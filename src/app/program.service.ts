@@ -13,7 +13,7 @@ export class ProgramService {
   ) { }
 
   getProgram(): Observable<Program[]> {
-      return this.http.get(`https://ttraining-api-gulev.c9users.io/api/v1/Program`)
+      return this.http.get(`http://localhost:2000/api/v1/Program`)
       .map((res:Response) => res.json());
     }
 
