@@ -39,6 +39,7 @@
     "font-awesome": "^4.7.0",
     "ng-http-interceptor": "^3.0.1",
     "ng2-file-upload": "^1.2.1",
+    "ngx-bootstrap": "^1.7.1",
     "primeng": "^4.0.0-rc.3",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",

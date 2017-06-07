@@ -1,1 +1,53 @@
+<a (click)="lgModal.show()" style="float:left !important; margin-left:10px !important;" class="btn btn-success">
+ <i class="icon-bolt"></i>
+ Add New Program
+</a>
 
+<div bsModal #lgModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" >
+    <div class="modal-content">
+      <div class="modal-header" >
+        <h4 class="modal-title" id="exampleModalLabel"><i class="icon-bolt" style="font-size:25px !important;"></i> New Program</h4>
+      </div>
+      <div class="modal-body" style="overflow-y: hidden;">
+        <form>
+          <div class="form-group">
+            <label for="difficulty" class="control-label"><b>Name:</b></label>
+            <div class="input-prepend">
+                <span class="add-on"><i class="icon-tasks"></i></span><input placeholder="Name Of The Program" style="width:400px;" id="name" size="30" type="text">
+            </div>
+          </div>
+           <div class="form-group">
+             <label for="difficulty" class="control-label"><b>Difficulty:</b></label>
+             <div class="input-prepend">
+						     <span class="add-on"><i class="icon-asterisk"></i></span><input placeholder="Difficulty Of The Program" style="width:400px;" id="difficulty" size="16" type="text">
+					   </div>
+           </div>
+           <div class="form-group">
+             <label for="goal" class="control-label"><b>Goal:</b></label>
+             <div class="input-prepend" >
+						     <span class="add-on"><i class="icon-bookmark"></i></span><input placeholder="Goal Of The Program" style="width:400px;" id="goal" size="16" type="text">
+					   </div>
+           </div>
+           <div class="form-group">
+             <label for="days" class="control-label"><b>Days:</b></label>
+             <div class="input-prepend" >
+						     <span class="add-on"><i class="icon-flag"></i></span><input placeholder="Continuation Of The Program" style="width:400px;" id="days" size="16" type="text">
+					   </div>
+           </div>
+
+           <div class="form-group">
+             <label for="message-text"  class="control-label"><b>Description:</b></label>
+             <textarea class="form-control" style="width:428px;" id="message-text"></textarea>
+           </div>
+         </form>
+
+
+      </div>
+      <div class="modal-footer">
+       <button type="button" class="btn btn-default" (click)="lgModal.hide()" ><i class="icon-ban-circle"></i> Close</button>
+       <button type="button" class="btn btn-primary"><i class="icon-check"></i> Save changes</button>
+     </div>
+    </div>
+  </div>
+</div>

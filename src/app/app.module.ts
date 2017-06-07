@@ -20,7 +20,9 @@ import { AppRoutingModule }                                   from './app-routin
 
 import { FileDropDirective, FileSelectDirective }             from 'ng2-file-upload';
 
-import { NgbModule }                                          from '@ng-bootstrap/ng-bootstrap';
+import { ModalModule } from 'ngx-bootstrap';
+
+import { DemoModalStaticComponent }                                 from './modal-basic';
 
 
 
@@ -31,7 +33,7 @@ import { NgbModule }                                          from '@ng-bootstra
     FormsModule,
     AppRoutingModule,
     HttpInterceptorModule,
-    NgbModule.forRoot()
+    ModalModule.forRoot()
    ],
   declarations: [
     AppComponent,
@@ -42,7 +44,8 @@ import { NgbModule }                                          from '@ng-bootstra
     DashboardComponent,
     UserComponent,
     FileDropDirective,
-    FileSelectDirective
+    FileSelectDirective,
+    DemoModalStaticComponent
   ],
   providers: [UserService, ProgramService],
   bootstrap:    [ AppComponent ]
