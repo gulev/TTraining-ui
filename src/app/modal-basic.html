@@ -10,11 +10,11 @@
         <h4 class="modal-title" id="exampleModalLabel"><i class="icon-bolt" style="font-size:25px !important;"></i> New Program</h4>
       </div>
       <div class="modal-body" style="overflow-y: hidden;">
-        <form>
+
           <div class="form-group">
             <label for="difficulty" class="control-label"><b>Name:</b></label>
             <div class="input-prepend">
-                <span class="add-on"><i class="icon-tasks"></i></span><input placeholder="Name Of The Program" style="width:400px;" id="name" size="30" type="text">
+                <span class="add-on"><i class="icon-tasks"></i></span><input [(ngModel)]="program" placeholder="Name Of The Program" style="width:400px;" id="name" size="30" type="text">
             </div>
           </div>
            <div class="form-group">
@@ -40,13 +40,13 @@
              <label for="message-text"  class="control-label"><b>Description:</b></label>
              <textarea class="form-control" style="width:428px;" id="message-text"></textarea>
            </div>
-         </form>
+
 
 
       </div>
       <div class="modal-footer">
        <button type="button" class="btn btn-default" (click)="lgModal.hide()" ><i class="icon-ban-circle"></i> Close</button>
-       <button type="button" class="btn btn-primary"><i class="icon-check"></i> Save changes</button>
+       <button  (click)='onClick()' type="button" class="btn btn-primary"><i class="icon-check"></i> Save changes</button>
      </div>
     </div>
   </div>

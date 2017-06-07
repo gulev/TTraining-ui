@@ -9,8 +9,8 @@ import { FileUploader }           from 'ng2-file-upload';
 @Component({
   selector: 'program',
   template: `
-        <demo-modal-static></demo-modal-static>
-      
+        <demo-modal-static (notify)='onNotify($event)' ></demo-modal-static>
+
        <div style="clear:both; margin-top:10px;"></div>
 				<div style="margin-left:10px !important;" *ngFor="let program of programs"
           [ngClass]="{'blue': (program.difficulty==='Begginer'), 'yellow': (program.difficulty==='Advanced'), 'red': (program.difficulty==='Pro')}"
@@ -74,6 +74,10 @@ export class ProgramComponent {
   loadProgram() {
    this.programService.getProgram().subscribe(data => this.programs = data);
  }
+
+ onNotify(message:string):void {
+    alert(message);
+  }
 
  ngOnInit() {
   this.loadProgram();
